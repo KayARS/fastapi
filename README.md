@@ -1,5 +1,6 @@
 The original readme is in apiREADME.md
 # Launch
+run
 ´
 myClscript.sh
 ´
