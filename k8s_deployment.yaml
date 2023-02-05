@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  selector:
+    matchLabels:
+      #this selector is used to connect to service-selector-run
+      app: example
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+        - name: api-container
+          image: api-image
+          #docker can only use local images
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 7080
