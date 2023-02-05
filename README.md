@@ -1,8 +1,8 @@
+The original readme is in apiREADME.md
 # Launch
-Two launch files 
-launch_api.ps1 for windows powershell
-and launch_api.sh for linux.
-The only difference, is the line to let docker use local images, too.
+'''
+myClscript.sh
+'''
 
 ## Usage
 Server should be available on localhost afterwards, but the minikube service also opens the browser directly on the correct port
@@ -25,6 +25,11 @@ docker ps
 
 //important to check in which context we are running
 docker context ls 
+
+// creates a local docker registry, to find local images
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+// stops the registry
+docker container stop registry
 '''
 ### kubernetes
 '''

@@ -7,11 +7,13 @@ spec:
     matchLabels:
       #this selector is used to connect to service-selector-run
       app: example
+      department: cicd
   replicas: 1
   template:
     metadata:
       labels:
         app: example
+        department: cicd
     spec:
       containers:
         - name: api-container
@@ -20,3 +22,5 @@ spec:
           imagePullPolicy: Never
           ports:
             - containerPort: 7080
+---
+
