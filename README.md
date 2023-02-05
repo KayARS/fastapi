@@ -11,7 +11,7 @@ Server should be available on localhost afterwards, but the minikube service als
 
 You can check 
 `
-localhost:<port>/docs 
+localhost:<port>/docs \
 `
 For the REST-API (basic FastApi example)
 
@@ -20,52 +20,52 @@ For the REST-API (basic FastApi example)
 Some useful commands when working
 ### docker
 `
-docker build --tag <name> <path-to-dockerfile-directory>
-docker images
-docker ps
+docker build --tag <name> <path-to-dockerfile-directory>\
+docker images\
+docker ps\
 `
 
-important to check in which context we are running
+important to check in which context we are running\
 `
-docker context ls 
+docker context ls \
 `
 
-// creates a local docker registry, to find local images
+creates a local docker registry, to find local images\
 `
-docker run -d -p 5000:5000 --restart=always --name registry registry:2
+docker run -d -p 5000:5000 --restart=always --name registry registry:2\
 `
-// stops the registry
+stops the registry
 `
-docker container stop registry
+docker container stop registry\
 `
 ### kubernetes
 `
-kubectl get <pods/deployment/services/...> --all
-kubectl delete <pods/services/deployment/...> filename> --all
-kubectl logs <pod-name>
+kubectl get <pods/deployment/services/...> --all\
+kubectl delete <pods/services/deployment/...> filename> --all\
+kubectl logs <pod-name>\
 `
-applies a yaml config
+applies a yaml config\
 `
-kubectl apply/delete -f <filename>
-exposes a deployment e.g., via nodeport or loadbalancer
+kubectl apply/delete -f <filename>\
+exposes a deployment e.g., via nodeport or loadbalancer\
 `
-kubectl expose deployment <name> 
+kubectl expose deployment <name> \
 `
-important to check in which context we are running
+important to check in which context we are running\
 `
-kubectl config get-contexts
+kubectl config get-contexts\
 `
 
 ### minikube
 `
-minikube start (check params)
-minikube delete
+minikube start (check params)\
+minikube delete\
 `
 
-enables using locak docker images:
+enables using locak docker images:\
 
 
-Returns a URL to connect to a service
+Returns a URL to connect to a service\
 `
-minikube service api-deployment 
+minikube service api-deployment \
 `
