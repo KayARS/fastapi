@@ -10,7 +10,6 @@ myClscript.sh
 `
 \
 Docker container runs a uvicorn webserver.
-Moreover, the container runs in a kubernetes pod, accessible over a nodeport service 
 
 
 ## Usage
